@@ -7,17 +7,6 @@ const app = express()
 const PORT = 4000
 app.use(express.json())
 
-const MongoURL = "mongodb://localhost:27017"
-
-const createConnection = async () => {
-    const client = new MongoClient(MongoURL)
-    await client.connect()
-    console.log("MongoDb connected successfully");
-    return client
-}
-
-export const client = await createConnection();
-
 app.get('/', (req, res) => {
     res.send('Hello World')
   })
