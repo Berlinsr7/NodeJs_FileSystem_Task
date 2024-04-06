@@ -12,7 +12,8 @@ app.get('/', (req, res) => {
   })
 
 app.post('/file', (req, res) =>{
-    const folderPath = 'D:\\Guvi\\Tasks\\Mongo_DB\\API Task\\Output';
+    // const folderPath = 'D:\\Guvi\\Tasks\\Mongo_DB\\API Task\\Output';
+    const folderPath = __dirname
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().replace(/:/g, '-').replace(/\..+/, '');
     const fileName = `${formattedDate}.txt`;
