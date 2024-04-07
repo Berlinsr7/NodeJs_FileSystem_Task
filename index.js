@@ -1,5 +1,4 @@
 import express from "express";
-import { MongoClient } from "mongodb";
 import fs from "fs"
 import path from "path"
 
@@ -12,8 +11,7 @@ app.get('/', (req, res) => {
   })
 
 app.post('/file', (req, res) =>{
-    // const folderPath = 'D:\\Guvi\\Tasks\\Mongo_DB\\API Task\\Output';
-    const folderPath = __dirname
+    const folderPath = 'D:\\Guvi\\Tasks\\Mongo_DB\\API Task\\Output';
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().replace(/:/g, '-').replace(/\..+/, '');
     const fileName = `${formattedDate}.txt`;
